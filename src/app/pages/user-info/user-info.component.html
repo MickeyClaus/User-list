@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="page-header flex-sb-c mb-4 mt-4">
+      <p class="felx-c-c">Users Info</p>
+      <button class="filled-btn p-2 flex-c-c" [routerLink]="['/user-list']">
+        <mat-icon class="btn-icon mr-2">keyboard_backspace</mat-icon>
+        <span>Back</span>
+      </button>
+    </div>
+    <div class="info-box" >
+        <div class="mt-3">
+            <span class="main">Name</span>: <span class="ml-2">{{userData?.name}}</span>
+        </div>
+
+
+        <div class="mt-3">
+            <span class="main">Email</span>: <span class="ml-2">{{userData?.email}}</span>
+        </div>
+
+        <div class="mt-3">
+            <span class="main">Phone</span>: <span class="ml-2"> {{userData?.phone}}</span>
+        </div>
+    </div>
+  </div>
+  

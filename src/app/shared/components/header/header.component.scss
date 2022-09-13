@@ -1,0 +1,34 @@
+#header {
+  background: #1c3651;
+  height: 114px;
+  .logo {
+    width: 8%;
+    height: 100% !important;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .nav {
+    width: 23%;
+    p {
+      text-transform: uppercase;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: "BebasNeue", Arial, sans-serif;
+      display: inline-block;
+      padding-bottom: 10px;
+      a {
+        &:hover {
+          cursor: pointer;
+          padding-bottom: 2px;
+          border-bottom: 2px solid #2fa6ea;
+        }
+      }
+    }
+  }
+}
+
+

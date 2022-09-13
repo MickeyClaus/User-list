@@ -1,0 +1,25 @@
+.confirm {
+  font-size: 12px;
+  text-align: center;
+
+  .text{
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: -1rem;
+  }
+
+  .btn {
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+
+  .btn-yes {
+    background: #09aa40;
+  }
+
+  .btn-no {
+    background: #ff6161;
+  }
+}

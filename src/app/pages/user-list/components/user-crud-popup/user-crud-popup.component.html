@@ -1,0 +1,66 @@
+<div class="subtitle mt-2 mb-3">
+  <h4 *ngIf="data">Update User</h4>
+  <h4 *ngIf="!data">Add User</h4>
+</div>
+<form
+  name="form"
+  (ngSubmit)="f.form.valid && onSubmit()"
+  #f="ngForm"
+  novalidate
+>
+  <div class="form-box">
+    <div class="form-group mt-2">
+      <label for="name">Name</label>
+      <input
+        class="default--input"
+        name="name"
+        [(ngModel)]="userData.name"
+        #name="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+        required
+      />
+      <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+        <div *ngIf="name.errors.required">Name is required</div>
+      </div>
+    </div>
+    <div class="form-group mt-2">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="default--input"
+        name="email"
+        [(ngModel)]="userData.email"
+        #email="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
+      />
+      <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+        <div *ngIf="email.errors.required">Email is required</div>
+        <div *ngIf="email.errors.pattern">This is not a valid Email!!!</div>
+      </div>
+    </div>
+    <div class="form-group mt-2">
+      <label for="phone">Phone</label>
+      <input
+        type="number"
+        class="default--input"
+        name="phone"
+        [(ngModel)]="userData.phone"
+        #phone="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }"
+        required
+      />
+      <div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+        <div *ngIf="phone.errors.required">Phone is required</div>
+      </div>
+    </div>
+    <div class="btn-box mt-3 flex-fe-c">
+      <button class="filled-btn p-2 flex-c-c">
+        <mat-icon class="btn-icon mr-2">done</mat-icon>
+        <span>Submit</span>
+      </button>
+    </div>
+  </div>
+</form>
+<mat-icon class="popup-close" (click)="closeDialog()">close</mat-icon>

@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+// Basic imports
+// Reset + modify styles
+@import url("assets/styles/reset.scss");
+// Grid system
+@import url("assets/styles/flex-grid.scss");
+// Default elements
+@import url("assets/styles/default.scss");
+// Helper classes
+@import url("assets/styles/atomic.scss");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #eeeeee;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.popup-header {
+  margin: -20px -24px 15px -24px !important;
+  border-bottom: 1px solid #a8a8a8;
+  padding-left: 24px;
+  font-size: 1.6rem;
+}
+
+.popup-footer {
+  border-top: 1px solid #a8a8a8;
+  margin: 20px -24px -20px -24px !important;
+  padding-right: 24px !important;
+}
+
+.resetPadding .mat-dialog-container {
+  padding: 0;
+}
+
+// SCROLL STYLE
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d5d5d5;
+  border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #979797;
+  border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.error-hint {
+  border: 1px solid red !important;
+}
+
+.main-table {
+  border-collapse: collapse !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  tr {
+    height: 36px !important;
+  }
+
+  thead th {
+    text-transform: uppercase;
+  }
+
+  td {
+    font-size: 12px !important;
+  }
+
+  .select {
+    margin: -1rem;
+  }
+
+  td,
+  th {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    color: #000000;
+  }
+
+  .action-column {
+    width: 3%;
+    vertical-align: middle;
+    text-align: center;
+
+    .mat-radio-label {
+      width: 20px;
+    }
+  }
+
+  .enables-icon {
+    cursor: pointer;
+  }
+
+  .enables-icon {
+    color: #666666;
+  }
+
+  .icon,
+  .mat-icon {
+    font-size: 21px !important;
+    line-height: 21px;
+  }
+}
+
+.page-header {
+  margin-top: 20px;
+  padding: 0 8px;
+  height: 34px !important;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  button {
+    height: 26px;
+    width: 80px;
+    background: #1c3651;
+    border-radius: 2px;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+  }
+}
+.filled-btn {
+  cursor: pointer;
+  background: #1c3651;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+.mat-dialog-container {
+  position: relative;
+
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

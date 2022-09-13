@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="page-header flex-sb-c mb-4 mt-4">
+    <p class="felx-c-c">Users List</p>
+    <button class="filled-btn p-2 flex-c-c" (click)="addUser()">
+      <mat-icon class="btn-icon mr-2">done</mat-icon>
+      <span>Add</span>
+    </button>
+  </div>
+  <div class="table-box">
+    <app-users-table [dataSource]="users" (updateItem)="update($event)"></app-users-table>
+  </div>
+</div>
